@@ -1,15 +1,38 @@
-Welcome to your new dbt project!
+# Stock Market Data Pipeline
 
-### Using the starter project
+An automated data engineering pipeline that collects, stores, and transforms 
+real-time stock market data.
 
-Try running the following commands:
-- dbt run
-- dbt test
+## What it does
+- Extracts live stock price data from Yahoo Finance API
+- Loads data into PostgreSQL database
+- Transforms data using dbt models
+- Tracks daily price changes and moving averages
 
+## Tech Stack
+- Python 3.11
+- PostgreSQL
+- dbt (data build tool)
+- Yahoo Finance API (yfinance)
+- Git
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+## Pipeline Architecture
+## dbt Models
+- `stock_summary` — average, max, min closing price per ticker
+- `daily_price_change` — daily price movement using lag() window function
+- `moving_average` — 3 day moving average to identify price trends
+
+## Stocks Tracked
+- AAPL (Apple)
+- GOOGL (Google)
+- MSFT (Microsoft)
+- AMZN (Amazon)
+
+## How to run
+1. Run ETL pipeline: `python stock_pipeline.py`
+2. Run dbt models: `dbt run`
+
+## Author
+Muhammad Mohid Khan
+Data Analyst | Aspiring Data Engineer
+GitHub: github.com/mohid4862-cloud
