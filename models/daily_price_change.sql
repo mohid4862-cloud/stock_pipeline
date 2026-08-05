@@ -15,3 +15,5 @@ select
     )) * 100)::numeric, 2) as pct_change
 from {{ source('public', 'stock_prices') }}
 order by ticker, trade_date
+
+
