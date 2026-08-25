@@ -21,7 +21,7 @@ DB_CONFIG = {
     "user": "postgres",
     "password": "tiger"
 }
-TICKERS = ["AAPL", "GOOGL", "MSFT", "AMZN"]
+TICKERS = ["AAPL", "GOOGL", "MSFT", "AMZN", "TSLA"]
 
 def connect_db():
     """Connect to PostgreSQL database."""
